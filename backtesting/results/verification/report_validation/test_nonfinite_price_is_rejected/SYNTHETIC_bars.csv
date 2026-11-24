@@ -1,3 +1,0 @@
-symbol,start_epoch,end_epoch,open,high,low,close,volume,is_rth,kind
-TSLA,1768921200,1768921205,100,101,99,nan,20,1,realtime5s
-TSLA,1768921205,1768921210,100,101,99,100,20,1,realtime5s
