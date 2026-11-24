@@ -1,0 +1,2 @@
+symbol,side,entry_timestamp,entry_price,exit_timestamp,exit_price,quantity,entry_reason,exit_reason,gross_pnl,commissions,slippage_cost,spread_cost,net_pnl,duration_seconds
+TSLA,BUY,1768919715,102.08159999999999,1768919730,89.927999999999997,15,production_analyzeData,SMA10_cross,-182.30399999999997,4,1.4399999999999999,0.8640000000000001,-186.30399999999997,15

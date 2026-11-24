@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{273fc754-103f-4348-a691-2f5adffb0250}</ProjectGuid>
+    <RootNamespace>TwsLib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINSOCK_DEPRECATED_NO_WARNINGS;
+_CRT_SECURE_NO_WARNINGS;PROTOBUF_USE_DLLS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\TWS API\source\CppClient\client;C:\TWS API\source\CppClient\client\protobuf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <DisableSpecificWarnings>4251;4267</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_WINSOCK_DEPRECATED_NO_WARNINGS;
+_CRT_SECURE_NO_WARNINGS;PROTOBUF_USE_DLLS</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>C:\TWS API\source\CppClient\client;C:\TWS API\source\CppClient\client\protobuf;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp23</LanguageStandard>
+      <DisableSpecificWarnings>4251;4267</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>
+      </SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\bar.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\CommissionAndFeesReport.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\CommonDefs.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\Contract.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\ContractCondition.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\Decimal.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\DefaultEWrapper.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\DepthMktDataDescription.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EClient.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EClientException.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EClientMsgSink.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EClientSocket.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EClientUtils.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EDecoder.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EDecoderUtils.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EMessage.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EMutex.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EOrderDecoder.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EPosixClientSocketPlatform.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EReader.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EReaderOSSignal.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EReaderSignal.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\ESocket.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\ETransport.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EWrapper.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EWrapper_prototypes.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\Execution.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\ExecutionCondition.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\FamilyCode.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\HistogramEntry.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\HistoricalSession.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\HistoricalTick.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\HistoricalTickBidAsk.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\HistoricalTickLast.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\IExternalizable.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\IneligibilityReason.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\MarginCondition.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\NewsProvider.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\OperatorCondition.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\Order.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\OrderCancel.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\OrderCondition.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\OrderState.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\PercentChangeCondition.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\platformspecific.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\PriceCondition.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\PriceIncrement.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountDataEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountDataRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountSummary.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountSummaryEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountSummaryRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountUpdateMulti.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountUpdateMultiEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountUpdatesMultiRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountUpdateTime.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountValue.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AllOpenOrdersRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AutoOpenOrdersRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CalculateImpliedVolatilityRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CalculateOptionPriceRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelAccountSummary.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelAccountUpdatesMulti.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelCalculateImpliedVolatility.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelCalculateOptionPrice.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelContractData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelFundamentalsData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelHeadTimestamp.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelHistogramData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelHistoricalData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelHistoricalTicks.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelMarketData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelMarketDepth.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelNewsBulletins.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelOrderRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelPnL.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelPnLSingle.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelPositions.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelPositionsMulti.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelRealTimeBars.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelScannerSubscription.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelTickByTick.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelWshEventData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelWshMetaData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ComboLeg.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CommissionAndFeesReport.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CompletedOrder.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CompletedOrdersEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CompletedOrdersRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\Contract.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractDataEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractDataRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractDescription.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractDetails.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CurrentTime.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CurrentTimeInMillis.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CurrentTimeInMillisRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CurrentTimeRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\DeltaNeutralContract.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\DepthMarketDataDescription.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\DisplayGroupList.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\DisplayGroupUpdated.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ErrorMessage.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\Execution.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExecutionDetails.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExecutionDetailsEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExecutionFilter.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExecutionRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExerciseOptionsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FamilyCode.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FamilyCodes.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FamilyCodesRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FAReplace.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FARequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FundamentalsData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FundamentalsDataRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\GlobalCancelRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HeadTimestamp.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HeadTimestampRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistogramData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistogramDataEntry.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistogramDataRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalDataBar.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalDataEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalDataRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalDataUpdate.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalNews.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalNewsEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalNewsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalSchedule.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalSession.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTick.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTickBidAsk.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTickLast.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTicks.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTicksBidAsk.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTicksLast.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTicksRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\IdsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\IneligibilityReason.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ManagedAccounts.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ManagedAccountsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDataRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDataType.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDataTypeRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepth.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthExchanges.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthExchangesRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthL2.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketRule.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketRuleRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MatchingSymbolsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsArticle.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsArticleRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsBulletin.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsBulletinsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsProvider.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsProviders.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsProvidersRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NextValidId.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OpenOrder.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OpenOrdersEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OpenOrdersRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\Order.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderAllocation.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderBound.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderCancel.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderCondition.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderState.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderStatus.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PlaceOrderRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PnL.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PnLRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PnLSingle.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PnLSingleRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PortfolioValue.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\Position.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionMulti.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionMultiEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionsMultiRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PriceIncrement.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\QueryDisplayGroupsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\RealTimeBarsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\RealTimeBarTick.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ReceiveFA.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ReplaceFAEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\RerouteMarketDataRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\RerouteMarketDepthRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerDataElement.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerParameters.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerParametersRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerSubscription.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerSubscriptionRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SecDefOptParameter.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SecDefOptParameterEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SecDefOptParamsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SetServerLogLevelRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SmartComponent.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SmartComponents.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SmartComponentsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SoftDollarTier.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SoftDollarTiers.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SoftDollarTiersRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\StartApiRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SubscribeToGroupEventsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SymbolSamples.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickAttribBidAsk.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickAttribLast.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickByTickData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickByTickRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickGeneric.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickNews.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickOptionComputation.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickPrice.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickReqParams.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickSize.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickSnapshotEnd.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickString.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\UnsubscribeFromGroupEventsRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\UpdateDisplayGroupRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\UserInfo.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\UserInfoRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\VerifyCompleted.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\VerifyMessageApi.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\VerifyMessageRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\VerifyRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\WshEventData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\WshEventDataRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\WshMetaData.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\WshMetaDataRequest.pb.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\resource.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\ScannerSubscription.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\SoftDollarTier.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\StdAfx.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\TagValue.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\TickAttrib.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\TickAttribBidAsk.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\TickAttribLast.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\TimeCondition.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\TwsSocketClientErrors.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\Utils.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\VolumeCondition.h" />
+    <ClInclude Include="..\..\..\..\..\..\TWS API\source\CppClient\client\WshEventData.h" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\ContractCondition.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\Decimal.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\DefaultEWrapper.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EClient.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EClientSocket.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EClientUtils.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EDecoder.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EDecoderUtils.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EMessage.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EMutex.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EOrderDecoder.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EReader.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\EReaderOSSignal.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\ESocket.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\ExecutionCondition.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\MarginCondition.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\OperatorCondition.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\OrderCondition.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\PercentChangeCondition.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\PriceCondition.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountDataEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountDataRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountSummary.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountSummaryEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountSummaryRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountUpdateMulti.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountUpdateMultiEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountUpdatesMultiRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountUpdateTime.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AccountValue.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AllOpenOrdersRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\AutoOpenOrdersRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CalculateImpliedVolatilityRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CalculateOptionPriceRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelAccountSummary.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelAccountUpdatesMulti.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelCalculateImpliedVolatility.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelCalculateOptionPrice.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelContractData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelFundamentalsData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelHeadTimestamp.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelHistogramData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelHistoricalData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelHistoricalTicks.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelMarketData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelMarketDepth.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelNewsBulletins.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelOrderRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelPnL.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelPnLSingle.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelPositions.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelPositionsMulti.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelRealTimeBars.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelScannerSubscription.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelTickByTick.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelWshEventData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CancelWshMetaData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ComboLeg.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CommissionAndFeesReport.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CompletedOrder.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CompletedOrdersEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CompletedOrdersRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\Contract.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractDataEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractDataRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractDescription.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ContractDetails.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CurrentTime.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CurrentTimeInMillis.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CurrentTimeInMillisRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\CurrentTimeRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\DeltaNeutralContract.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\DepthMarketDataDescription.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\DisplayGroupList.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\DisplayGroupUpdated.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ErrorMessage.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\Execution.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExecutionDetails.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExecutionDetailsEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExecutionFilter.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExecutionRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ExerciseOptionsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FamilyCode.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FamilyCodes.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FamilyCodesRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FAReplace.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FARequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FundamentalsData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\FundamentalsDataRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\GlobalCancelRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HeadTimestamp.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HeadTimestampRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistogramData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistogramDataEntry.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistogramDataRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalDataBar.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalDataEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalDataRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalDataUpdate.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalNews.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalNewsEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalNewsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalSchedule.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalSession.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTick.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTickBidAsk.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTickLast.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTicks.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTicksBidAsk.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTicksLast.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\HistoricalTicksRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\IdsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\IneligibilityReason.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ManagedAccounts.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ManagedAccountsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDataRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDataType.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDataTypeRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepth.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthExchanges.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthExchangesRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthL2.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketDepthRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketRule.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MarketRuleRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\MatchingSymbolsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsArticle.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsArticleRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsBulletin.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsBulletinsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsProvider.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsProviders.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NewsProvidersRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\NextValidId.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OpenOrder.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OpenOrdersEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OpenOrdersRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\Order.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderAllocation.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderBound.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderCancel.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderCondition.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderState.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\OrderStatus.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PlaceOrderRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PnL.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PnLRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PnLSingle.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PnLSingleRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PortfolioValue.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\Position.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionMulti.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionMultiEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionsMultiRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PositionsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\PriceIncrement.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\QueryDisplayGroupsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\RealTimeBarsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\RealTimeBarTick.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ReceiveFA.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ReplaceFAEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\RerouteMarketDataRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\RerouteMarketDepthRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerDataElement.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerParameters.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerParametersRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerSubscription.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\ScannerSubscriptionRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SecDefOptParameter.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SecDefOptParameterEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SecDefOptParamsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SetServerLogLevelRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SmartComponent.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SmartComponents.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SmartComponentsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SoftDollarTier.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SoftDollarTiers.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SoftDollarTiersRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\StartApiRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SubscribeToGroupEventsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\SymbolSamples.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickAttribBidAsk.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickAttribLast.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickByTickData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickByTickRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickGeneric.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickNews.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickOptionComputation.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickPrice.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickReqParams.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickSize.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickSnapshotEnd.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\TickString.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\UnsubscribeFromGroupEventsRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\UpdateDisplayGroupRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\UserInfo.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\UserInfoRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\VerifyCompleted.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\VerifyMessageApi.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\VerifyMessageRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\VerifyRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\WshEventData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\WshEventDataRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\WshMetaData.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\protobuf\WshMetaDataRequest.pb.cc" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\SoftDollarTier.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\StdAfx.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\TimeCondition.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\Utils.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\TWS API\source\CppClient\client\VolumeCondition.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TwsLib.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

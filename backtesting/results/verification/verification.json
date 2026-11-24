@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "historical_market_data_used": false,
+  "checks": [
+    "Original adapter indicator/signal/time/sizing/exit tests pass",
+    "Identical inputs produce byte-identical trades/equity/orders/summary",
+    "Original long signal submits/fills/exits once; causal fills and net accounting reconcile",
+    "Commissions/spread/slippage reduce controlled-trade P&L",
+    "Changing unobserved fill-bar low cannot affect earlier signal, quantity or open fill",
+    "Original short signal, exit and cash/liability accounting reconcile",
+    "Unreplenished source cash and opposite order after rejected entry preserve production behavior",
+    "Ten simultaneous symbols obey stable launch order and shared cash; every equity event reconciles",
+    "Duplicate bars and warm-up data from the future are rejected",
+    "Missing daily warm-up is rejected",
+    "Synthetic CSV/JSON/Markdown/charts are explicitly labeled and reconcile to accounting"
+  ]
+}

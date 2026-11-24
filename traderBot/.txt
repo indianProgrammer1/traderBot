@@ -1,0 +1,66 @@
+ 
+ 
+ 
+ 
+ auto makeOrder = [&](Contract& c, OrderInstructions& instructions) 
+ {
+           OrderId validOrderId = apiData.getCurrentValidId();
+           Order order;
+           std::cout << "Executing order with ID: " << validOrderId << std::endl;
+           order.action = instructions.action;
+           order.orderId = validOrderId;
+           order.orderType = "LMT";
+		order.totalQuantity = instructions.quantity;    
+           order.lmtPrice = instructions.price;
+           order.cashQty = UNSET_DOUBLE;
+           order.account = "DU3384655";
+           order.outsideRth = true;
+           order.tif = "GTC";
+           client.placeOrder(validOrderId, c, order);
+
+      };
+
+       //hotPath 
+
+       auto analyzeLoop = [&](DataFetcher& fetcher)
+       {
+          
+	    OrderInstructions instructions; // Create an instance of OrderInstructions
+           while (!orderExcecuted.load()) {
+               if (fetcher.analyzeMarketData(&instructions)) {
+
+				bool expected = false;
+                   if (orderExcecuted.compare_exchange_strong(expected, true)) {
+                       makeOrder(fetcher.getContract(), instructions);
+
+                       std::cout << "Analyzing market data: ENOUGHT FOR EXECURE TRADE." << std::endl;
+                   }
+
+			}
+               std::this_thread::sleep_for(std::chrono::seconds(5));
+               std::cout << "Analyzing market data: NOT ENOUGHT FOR EXECURE TRADE." << std::endl;
+           }
+		};
+
+       std::thread thread1(analyzeLoop, std::ref(fetcher));
+       std::thread thread2(analyzeLoop, std::ref(fetcher2));
+       
+       
+       
+       
+       /* 1.quantity = risk/(buyingprice - stopLoss)
+   2V.Atr : if <RightNowPrice> - <todayOpenPrice> <= Atr*0.325
+   3V.sma20 < sma200 && <RightNowPrice> < sma20 = sell ,
+	V. sma20 > sma200 && <RightNowPrice> > sma20 = buy
+   4.V if  16:30  <rightNowTime< 16:45
+   5. if  <rightNowPrice> > yesterdayClose = buy
+	  if  <rightNowPrice> < yesterdayClose = sell
+   6. if <rightNowVol> >= AVGVol5DAY ;++
+
+   7. if vaild candle : if 0.0035 * rightNowPrice < bar.close - bar.open< 0.007 * rightNowTime
+		&&  (bar.close - bar.open)>= 0.7 * (bar.high - bar.low) = valid candle (maybeNeedABS)
+   8. if  <qqqPriceNow > qqqOpenPrice && qqqOpenPrice >= yesdardayCloseqqq*0.995 = buy
+	  if <qqqPriceNow < qqqOpenPrice && qqqOpenPrice <= yesdardayCloseqqq*1.005 = sell
+   9. if abs(<rightNowPrice> - <rightNowPriceRound>) <= 3 ;++ / סקלתמחיר
+   10. gap
+   */

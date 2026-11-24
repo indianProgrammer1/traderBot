@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED_NO_HISTORICAL_EXECUTION",
+  "requested_start": "2025-10-11",
+  "requested_end_inclusive": "2026-10-11",
+  "reasons": [
+    "Required actual five-second intraday data and warm-up are unavailable: C:\\Users\\yahav\\source\\repos\\traderBot\\backtesting\\data\\ibkr\\bars.csv"
+  ],
+  "initial_capital_default": 4200,
+  "historical_performance": null,
+  "historical_trades": null,
+  "break_even_source": "absent_in_supplied_source",
+  "synthetic_results_are_not_historical": true
+}

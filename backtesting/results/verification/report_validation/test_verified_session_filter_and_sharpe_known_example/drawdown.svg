@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="320" viewBox="0 0 920 320">
+<rect width="920" height="320" fill="#fff"/><g font-family="sans-serif" fill="#182c42">
+<text x="30" y="30" font-size="18">SYNTHETIC VERIFICATION — drawdown</text><path d="M60 60V260H860" fill="none" stroke="#9ba6b2"/>
+<text x="62" y="55">0.00%</text><text x="62" y="280">-0.50%</text>
+<text x="620" y="300">Chronological replay observations</text></g><polyline points="60.00,60.00 98.10,60.00 136.19,260.00 174.29,60.00 212.38,260.00 250.48,60.00 288.57,260.00 326.67,60.00 364.76,260.00 402.86,60.00 440.95,260.00 479.05,60.00 517.14,260.00 555.24,60.00 593.33,260.00 631.43,60.00 669.52,260.00 707.62,60.00 745.71,260.00 783.81,60.00 821.90,260.00 860.00,260.00" fill="none" stroke="#2357c6" stroke-width="2"/></svg>

@@ -1,0 +1,9 @@
+# Source audits and manifests are deliverables; generated binaries/caches are local.
+build/
+__pycache__/
+data/ibkr/raw/
+data/ibkr/*.sqlite
+data/ibkr/bars.csv
+results/verification/INVALID_*.csv
+results/verification/MISSING_*.csv
+results/verification/SYNTHETIC_*.csv

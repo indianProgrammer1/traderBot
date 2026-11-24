@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="320" viewBox="0 0 920 320">
+<rect width="920" height="320" fill="#fff"/><g font-family="sans-serif" fill="#182c42">
+<text x="30" y="30" font-size="18">SYNTHETIC VERIFICATION — portfolio equity</text><path d="M60 60V260H860" fill="none" stroke="#9ba6b2"/>
+<text x="62" y="55">1072.00 USD</text><text x="62" y="280">1000.00 USD</text>
+<text x="620" y="300">Chronological replay observations</text></g><polyline points="60.00,260.00 93.33,246.11 126.67,243.33 160.00,229.44 193.33,226.67 226.67,212.78 260.00,210.00 293.33,196.11 326.67,193.33 360.00,179.44 393.33,176.67 426.67,162.78 460.00,160.00 493.33,146.11 526.67,143.33 560.00,129.44 593.33,126.67 626.67,112.78 660.00,110.00 693.33,96.11 726.67,93.33 760.00,79.44 793.33,76.67 826.67,62.78 860.00,60.00" fill="none" stroke="#2357c6" stroke-width="2"/></svg>

@@ -1,0 +1,5 @@
+order_id,timestamp,symbol,side,quantity,purpose,status,reason,submitted_timestamp,signal_price,fill_price,commission,producer_cash
+1,1768919711,TSLA,SELL,16,ENTRY,SUBMITTED,production_analyzeData,1768919711,98.200000000000003,0,0,8929
+1,1768919715,TSLA,SELL,16,ENTRY,FILLED,next_strictly_later_5s_open,1768919711,98.200000000000003,98.180360000000007,1,8929
+2,1768919725,TSLA,BUY,16,EXIT,SUBMITTED,SMA10_cross,1768919725,110,0,0,8929
+2,1768919730,TSLA,BUY,16,EXIT,FILLED,next_strictly_later_5s_open,1768919725,110,110.02199999999999,1,8929

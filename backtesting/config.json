@@ -1,0 +1,17 @@
+{
+  "start": "2025-10-11",
+  "end_exclusive": "2026-10-12",
+  "requested_end_inclusive": "2026-10-11",
+  "timezone": "America/New_York",
+  "strategy_timezone": "Asia/Jerusalem",
+  "symbols": ["TSLA", "NFLX", "CRWD", "MRNA", "AMD", "NVDA", "AAPL", "ROKU", "PDD", "MSFT"],
+  "initial_capital_usd": 4200,
+  "max_leverage": 2.5,
+  "process_lifecycle": "continuous; no daily reset, no forced end-of-day or end-of-test liquidation",
+  "scenarios": {
+    "baseline": {"commission_per_share": 0.005, "min_commission": 1.0, "slippage_bps": 1.0, "half_spread_bps": 1.0},
+    "moderate": {"commission_per_share": 0.0075, "min_commission": 1.5, "slippage_bps": 3.0, "half_spread_bps": 2.0},
+    "conservative": {"commission_per_share": 0.01, "min_commission": 2.0, "slippage_bps": 5.0, "half_spread_bps": 3.0}
+  },
+  "cost_assumptions": "Illustrative configurable estimates, not broker fee quotes or observed bid/ask. Production's 4200*2.5 hardcoded buying-power expression supplies capital/leverage defaults. Borrow availability, borrow costs and financing require additional data."
+}

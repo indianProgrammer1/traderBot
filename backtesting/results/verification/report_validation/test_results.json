@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "tests": 13,
+  "failures": 0,
+  "errors": 0,
+  "historical_market_data_used": false,
+  "fixture_scope": "SYNTHETIC UNIT TESTS ONLY"
+}

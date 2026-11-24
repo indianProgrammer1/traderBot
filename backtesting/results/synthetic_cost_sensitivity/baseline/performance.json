@@ -1,0 +1,37 @@
+{
+  "status": "SYNTHETIC_VERIFICATION_ONLY",
+  "initial_capital": 4200,
+  "final_equity": 4017.424,
+  "net_pnl": -182.57600000000002,
+  "net_return_percent": -4.347047619047617,
+  "total_closed_trades": 1,
+  "winning_trades": 0,
+  "losing_trades": 1,
+  "flat_trades": 0,
+  "win_rate_percent": 0.0,
+  "average_winning_trade": null,
+  "average_losing_trade": -182.57599999999994,
+  "profit_factor": 0.0,
+  "max_drawdown_usd": 182.57600000000002,
+  "max_drawdown_percent": 4.347047619047617,
+  "average_pnl_per_trade": -182.57599999999994,
+  "expectancy_per_trade": -182.57599999999994,
+  "total_commissions": 2.0,
+  "estimated_execution_costs": 0.5760000000000001,
+  "sharpe_ratio": null,
+  "sharpe_observations": 2,
+  "sharpe_assumption": "252 annualization; zero risk-free rate; last observation of each validated NY session. A verified exchange-session calendar and at least20 session returns are required. Otherwise N/A. Artificial weekend/holiday boundary observations are excluded when a calendar is supplied.",
+  "monthly": [
+    {
+      "month": "2026-01",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "net_pnl": -182.57600000000002,
+      "return_percent": -4.347047619047617,
+      "max_drawdown_usd": 182.57600000000002,
+      "max_drawdown_percent": 4.347047619047617
+    }
+  ],
+  "accounting": "Portfolio P&L includes marked open positions; trade statistics include closed trades only. Monthly P&L is change in marked portfolio equity, not a sum of exits. Slippage/spread already affect execution prices and are not deducted twice. Open positions are not forcibly liquidated."
+}
